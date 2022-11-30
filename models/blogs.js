@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const validator = require('validator');
 
 const blogSchema = new mongoose.Schema({
     imageUrl: [{
@@ -14,8 +15,15 @@ const blogSchema = new mongoose.Schema({
         lowercase:true
     },
     blogDate:{
-        
+        type:String,
+        require:true,
+    },
+    blogDescription:{
+        type:String,
+        require:true,
     }
+}, {
+    timestamps: true
 });
 
 
