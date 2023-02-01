@@ -5,8 +5,9 @@ const blogController=require('../controller/blog.controller');
 
 router.route('/blog')
 .post(blogController.createBlog)
-/* .get(productController.getProduct)
-router.route('/product/:id')
-.get(productController.getProductById) */
+.get(blogController.getBlogs)
+router.route('/blog/:id')
+.patch(blogController.updateBlog)
+.delete(blogController.deletBlog)
 
 module.exports=router;
