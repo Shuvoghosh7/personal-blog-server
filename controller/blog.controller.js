@@ -1,7 +1,7 @@
 const { createBlogServices } = require("../services/blog.service")
 
 
-exports.createJobs=async (req, res, next) => {
+exports.createBlog=async (req, res, next) => {
     try {
       //create method
       const result=await createBlogServices(req.body)
