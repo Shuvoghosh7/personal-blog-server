@@ -7,6 +7,7 @@ router.route('/blog')
 .post(blogController.createBlog)
 .get(blogController.getBlogs)
 router.route('/blog/:id')
+.get(blogController.getBlogById)
 .patch(blogController.updateBlog)
 .delete(blogController.deletBlog)
 

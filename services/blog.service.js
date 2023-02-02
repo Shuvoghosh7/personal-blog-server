@@ -9,6 +9,10 @@ exports.getBlogService = async () => {
     const jobs = await Blogs.find({})
     return jobs;
 }
+exports.getBlogByIdService = async (id) => {
+    const blog = await Blogs.findOne({_id:id})
+    return blog;
+}
 
 exports.updateBlogService = async (id,data) => {
     const result = await Blogs.updateOne({_id:id},data,{
